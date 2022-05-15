@@ -1,70 +1,89 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-	<artifactId>build-resources</artifactId>
-	<version>2-SNAPSHOT</version>
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
-	<description>Build resources for DKPro projects. Templates for NOTICE.txt and friends to be installed using the maven-remote-resources-plugin.</description>
-	<name>DKPro Build Resources</name>
-	<url>http://code.google.com/p/dkpro-core-asl/</url>
-	<inceptionYear>2013</inceptionYear>
-	<scm>
-		<connection>scm:svn:https://dkpro-core-asl.googlecode.com/svn/build-resources/trunk</connection>
-		<developerConnection>scm:svn:https://dkpro-core-asl.googlecode.com/svn/build-resources/trunk</developerConnection>
-		<url>http://code.google.com/p/dkpro-core-asl/source/browse/build-resources/trunk</url>
-	</scm>
-	<issueManagement>
-		<system>Google Code</system>
-		<url>http://code.google.com/p/dkpro-core-asl/issues/list</url>
-	</issueManagement>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-remote-resources-plugin</artifactId>
-				<version>1.4</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>bundle</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-		<pluginManagement>
-			<plugins>
+<!--
+  Licensed to the Technische Universität Darmstadt under one
+  or more contributor license agreements. See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership. The Technische Universität Darmstadt
+  licenses this file to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+  <artifactId>build-resources</artifactId>
+  <version>2-SNAPSHOT</version>
+  <description>Build resources for DKPro projects. Templates for NOTICE.txt and friends to be installed using the maven-remote-resources-plugin.</description>
+  <name>DKPro Build Resources</name>
+  <url>https://github.com/dkpro/dkpro-build-resources</url>
+  <inceptionYear>2013</inceptionYear>
+  
+  <scm>
+    <connection>scm:git:https://github.com/dkpro/dkpro-build-resources.git</connection>
+    <developerConnection>scm:git:https://github.com/dkpro/dkpro-build-resources.git</developerConnection>
+    <url>https://github.com/dkpro/dkpro-build-resources</url>
+    <tag>HEAD</tag>
+  </scm>
+  
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/dkpro/dkpro-build-resources/issues</url>
+  </issueManagement>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-remote-resources-plugin</artifactId>
+        <version>1.7.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>bundle</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <pluginManagement>
+      <plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
 					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.apache.maven.plugins</groupId>
-										<artifactId>maven-remote-resources-plugin</artifactId>
-										<versionRange>[1.4,)</versionRange>
-										<goals>
-											<goal>bundle</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+        <plugin>
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-remote-resources-plugin</artifactId>
+                    <versionRange>[1.4,)</versionRange>
+                    <goals>
+                      <goal>bundle</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore />
+                  </action>
+                </pluginExecution>
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
