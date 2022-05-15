@@ -15,14 +15,12 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
   <artifactId>build-resources</artifactId>
-  <version>2-SNAPSHOT</version>
+  <version>2</version>
   <description>Build resources for DKPro projects. Templates for NOTICE.txt and friends to be installed using the maven-remote-resources-plugin.</description>
   <name>DKPro Build Resources</name>
   <url>https://github.com/dkpro/dkpro-build-resources</url>
@@ -32,7 +30,7 @@
     <connection>scm:git:https://github.com/dkpro/dkpro-build-resources.git</connection>
     <developerConnection>scm:git:https://github.com/dkpro/dkpro-build-resources.git</developerConnection>
     <url>https://github.com/dkpro/dkpro-build-resources</url>
-    <tag>HEAD</tag>
+    <tag>build-resources-2</tag>
   </scm>
 
   <developers>
