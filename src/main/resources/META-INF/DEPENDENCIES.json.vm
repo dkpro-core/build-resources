@@ -35,14 +35,14 @@ $nv#end
 #end
   "licenses": [
 #foreach ( $license in $project.licenses)
-#if($velocityCount > 1),
+#if($foreach.count > 1),
 #end
     { "name": "#escape(${license.name})", "url": "#escape(${license.url})" }#end
 
   ],
   "dependencies": [
 #foreach ( $project in $projects )
-#if($velocityCount > 1),
+#if($foreach.count > 1),
 #end
     {
       "name": "#escape(${project.name})",
@@ -58,7 +58,7 @@ $nv#end
 #end
       "licenses": [
 #foreach ( $license in $project.licenses)
-#if($velocityCount > 1),
+#if($foreach.count > 1),
 #end
         { "name": "#escape(${license.name})", "url": "#escape(${license.url})" }#end
 
